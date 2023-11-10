@@ -1,0 +1,105 @@
+body {
+    --rm-close-button-color: var(--primary-color);
+    --rm-font-family:var(--font-family);
+    --rm-content-font-size: 2rem;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --rm-font-family    : -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    --rm-backdrop-background: rgba(0, 0, 0, 0.3);
+    --rm-styled-modal-background: white;
+    --rm-styled-modal-border-radius: 0.5rem;
+    --rm-styled-modal-border-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    --rm-close-button-color: black;
+    --rm-content-padding: 4rem;
+    --rm-content-font-size: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    font-family: var(--rm-font-family);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 700;
+    width: inherit;
+    outline: 0;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--rm-backdrop-background);
+    z-index: 500;
+}
+
+.styledModal {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background: var(--rm-styled-modal-background);
+    position: relative;
+    margin: auto;
+    border-radius: var(--rm-styled-modal-border-radius);
+    box-shadow: var(--rm-styled-modal-border-shadow);
+}
+
+.closeButton {
+    align-self: flex-end;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    background: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--rm-close-button-color);
+}
+
+.closeButton:hover {
+    cursor: pointer;
+}
+
+.content {
+    padding: var(--rm-content-padding);
+    display: block;
+    font-size: var(--rm-content-font-size);
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+}
